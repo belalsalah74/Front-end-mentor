@@ -1,0 +1,157 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --dark-blue: hsl(215, 32%, 27%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Outfit, monospace;
+    background-color: var(--main-bg);
+    color: var(--soft-blue);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cyan);
+}
+
+.container {
+    margin: 8rem auto;
+    width: 90%;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    margin: auto;
+    border-radius: 10px;
+    display: grid;
+    overflow: hidden;
+    box-shadow: 0px 8px 2px 45px rgb(9 16 27 / 8%),
+        0px 25px 4px 13px rgb(9 16 27 / 20%)
+}
+
+.card-top {
+    background-color: var(--cyan);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card-img-icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+
+.card-top:hover .card-img {
+    filter: opacity(0.5);
+}
+
+.card-top:hover>.card-img-icon {
+    visibility: visible;
+}
+
+.card-heading {
+    color: white;
+    display: block;
+    margin: 1.5rem 0;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+.card-details {
+    font-size: 1.8rem;
+}
+
+.plan {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    border-bottom: 1px solid var(--dark-blue);
+    padding-bottom: 2rem;
+}
+
+.price {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.price::before {
+    content: url(./images/icon-ethereum.svg);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.timer {
+    font-weight: 400;
+}
+
+.timer::before {
+    content: url(./images/icon-clock.svg);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 1.5rem;
+}
+
+.name {
+    color: white;
+    font-size: 1.6rem;
+}
+
+@media (min-width:600px) {
+    .card {
+        width: 350px;
+    }
+}
+
+/* attribution */
+.attribution {
+    margin-top: 4rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--cyan);
+    color: white;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
